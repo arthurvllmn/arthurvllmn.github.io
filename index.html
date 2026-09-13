@@ -120,8 +120,6 @@ h1{
   font-size:.95rem;
 }
 
-/* ---------- sections ---------- */
-
 section{ padding:clamp(3rem,7vh,4.5rem) 0 }
 
 .section-head{
@@ -140,7 +138,6 @@ section{ padding:clamp(3rem,7vh,4.5rem) 0 }
 }
 .section-head .rule{ flex:1 1 auto; height:1px; background:var(--faint) }
 
-/* ---------- projects ---------- */
 
 .project{ margin-bottom:clamp(3.5rem,9vh,6rem) }
 .project:last-child{ margin-bottom:0 }
@@ -200,7 +197,6 @@ dl{ margin:0 }
 .result .num .arrow{ color:var(--blue); padding:0 .12em }
 .result .cap{ display:block; font-size:.82rem; margin-top:.3rem; max-width:20ch }
 
-/* ---------- closing ---------- */
 
 .closing p{ max-width:var(--measure); margin:0 0 1rem }
 
@@ -210,7 +206,6 @@ footer{
   font-size:.85rem;
 }
 
-/* ---------- responsive ---------- */
 
 @media (max-width:640px){
   body{ font-size:16px }
@@ -220,7 +215,6 @@ footer{
   .dimension{ max-width:15rem }
 }
 
-/* ---------- the one piece of motion on the page ---------- */
 
 @media (prefers-reduced-motion: no-preference){
   .dimension .rule{ animation:draw .7s cubic-bezier(.2,.8,.3,1) both }
@@ -277,19 +271,14 @@ footer{
     <dl>
       <div class="field">
         <dt>The problem</dt>
-        <!-- SWAP: add why it mattered to your team specifically : lap time, suspension response, a target set by vehicle dynamics. -->
         <dd>Every kilogram at the wheel costs more than a kilogram on the chassis: it loads the dampers, slows the suspension response and has to be accelerated and braked at every single corner. The team had never built a composite rim, so there was no internal knowledge of layup or tooling. Additionally, the aluminium wheels were not as stiff during cornering, causing camber loss.</dd>
       </div>
       <div class="field">
         <dt>What I did</dt>
-        <dd>Led the research and design: laminate architecture, FEM sizing against a camber stiffness target. The layup and tooling study was made with composite laboratories for in-house production.</dd>
+        <dd>Led the research and design: laminate architecture, FEM sizing against a camber stiffness target. I ran the layup and tooling study with EPFL's composite labs so the part could be made in-house.</dd>
       </div>
       <div class="field">
         <dt>The limitations </dt>
-        <!-- WRITE THIS ONE YOURSELF. I know you landed at 0.267°/g against a 0.2°/g
-             target, but not why : ply count, tooling limit, a trade against mass,
-             a modelling assumption that didn't hold. That reason is the whole value
-             of this field. Delete the placeholder below once you've written it. -->
         <dd>Design ended up with 0.267°/g against a 0.2°/g camber stiffness target because of a bad modelling assumption regarding the applied forces.</dd>
       </div>
       <div class="field">
@@ -300,7 +289,6 @@ footer{
 
     <div class="results">
       <div class="result">
-        <!-- VERIFY: 1.8 kg was inferred from your own "1.1 kg saved, 61%" figure. -->
         <span class="num"><span class="was">1.8 kg</span><span class="arrow">→</span>0.7 kg</span>
         <span class="cap ann">Per rim, aluminium to carbon</span>
       </div>
@@ -329,8 +317,6 @@ footer{
       </div>
       <div class="field">
         <dt>What I did</dt>
-        <!-- SWAP: name the analyses you personally owned. Four-person project :
-             an interviewer will ask, and vagueness here weakens the whole entry. -->
         <dd>Four FEM studies in 3DEXPERIENCE : thermal and structural, on an initial and a revised geometry : using quadratic tetrahedral elements on a 1/18 azimuthal sector of an Inconel 718 spike rated for 7.5 kN at 25 bar chamber pressure.</dd>
       </div>
       <div class="field">
@@ -343,7 +329,7 @@ footer{
       </div>
       <div class="field">
         <dt>Tools</dt>
-        <dd class="ann">3DEXPERIENCE · Inconel 718 · Thermal FEM</dd>
+        <dd class="ann">3DEXPERIENCE · Inconel 718 · Thermal & structural FEM · LPBF</dd>
       </div>
     </dl>
 
@@ -373,9 +359,7 @@ footer{
     <dl>
       <div class="field">
         <dt>The problem</dt>
-        <!-- SWAP: say which loads : suspension pickups, harness mounts, seatbelt
-             anchorages, engine mounts. Naming them shows you know the load paths. -->
-        <dd>Aluminium inserts carry suspension and restraint loads into the laminate, and pull-out is the governing failure mode rather than anything in the composite itself. They were also over-specified: mass we were carrying because nobody had gone back to check the sizing against test data.</dd>
+        <dd>Aluminium inserts carry suspension and restraint loads into the laminate. Pull-out and shear are the governing failure modes rather than anything in the composite itself. They were also over-specified: mass we were carrying because nobody had gone back to check the sizing against test data.</dd>
       </div>
       <div class="field">
         <dt>what I did</dt>
@@ -383,10 +367,7 @@ footer{
       </div>
       <div class="field">
         <dt>what broke</dt>
-        <!-- WRITE THIS ONE YOURSELF. A delamination, a bond failure, a coupon that
-             disagreed with the model, a part that didn't come off the tool cleanly,
-             a drawing that got misread on the shop floor. Anything real. -->
-        <dd>Too many various inserts design because of suspension fasteners. Unified design was done for the sixth car</dd>
+        <dd>The fifth car ended up with too many different insert designs, one per suspension fastener variant, which multiplied tooling and drawings for no structural benefit. I standardised them into a single family for the sixth car.</dd>
       </div>
       <div class="field">
         <dt>tools</dt>
